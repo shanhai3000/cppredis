@@ -3,4 +3,4 @@ project(cppredis)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(cppredis main.cpp)
+add_executable(cppredis src/server.cpp include/server.h include/version.h)
