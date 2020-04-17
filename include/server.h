@@ -156,12 +156,13 @@ typedef enum{
 
 }OBJ_TYPE_ENCODING;
 /**
- * 2MSB-----the Most Significant 2 Bits of the first byte
+ * 2MSB 最高有效位-----the Most Significant 2 Bits of the first byte
  * 00|00 0000:2MSB==00，则该数据为该字节的后6位
  * 01|00 0000 00000000: 2MSB==01，代表该数据为16位，即后6位+1个8位完整字节
  * 10|00 0000:【32位整数】2MSB==10，后面跟一个32位的整数
  * 11|00 0000: 后面跟随特殊编码的对象。后6位为特殊对象的编码，于RDB_ENC_* 定义
  */
+
 #define RDB_6BITLEN         0
 #define RDB_14BITLEN        1
 #define RDB_32BITLEN        2
